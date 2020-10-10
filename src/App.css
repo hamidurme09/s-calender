@@ -1,38 +1,115 @@
-.App {
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.calender {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.calender-body {
+  min-height: 200px;
+  display: flex;
+}
+
+/* =====================
+calender-left
+===================== */
+
+.calender-left {
+  width: 60%;
+  border: 1px solid black;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.week {
+  /* background-color: lightblue; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.week table {
+  width: 100%;
+  border-spacing: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.week table thead th {
+  padding: 10px 0;
+  border-bottom: 1px solid gray;
+}
+
+.week table tbody td {
+  padding: 20px 0;
+  border-radius: 10px;
+}
+
+/* =====================
+calender-right
+===================== */
+
+.calender-right {
+  width: 40%;
+  padding: 20px;
+}
+
+.description {
+  padding-top: 20px;
+}
+
+.cal-standard {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.cal-standard-color {
+  height: 20px;
+  width: 45px;
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cal-standard-color-1 {
+  background-color: #E07628;
+}
+
+.cal-standard-color-2 {
+  background-color: #E8A771;
+}
+
+.cal-standard-color-3 {
+  background-color: #56A2D6;
+}
+
+.cal-standard-color-4 {
+  background-color: #064476;
+}
+
+.info {
+  padding-top: 5px;
+  padding-left: 55px;
+}
+
+/* =====================
+calender-footer
+===================== */
+.calender-footer {
+padding-top: 30px;
+}
+
+.footer-color-text {
+  display: flex;
+}
+
+.footer-color {
+  height: 20px;
+  width: 45px;
+  background-color: #E07628;
+  margin-right: 15px;
 }

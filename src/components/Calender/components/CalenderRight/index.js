@@ -3,7 +3,9 @@ import React from "react";
 const CalenderRight = () => {
   return (
     <div className="calender-right">
+      <div>
       <h4>DELIVERY DATE</h4>
+      </div>
       <p className="description">
         Select the day you wish to receive your order. Our products ship frozen-
         please make sure you plan ahead and save time for thawing.

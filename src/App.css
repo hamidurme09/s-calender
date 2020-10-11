@@ -8,6 +8,7 @@
 
 body {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 .calender {
@@ -31,10 +32,6 @@ calender-left
   text-align: center;
 }
 
-.week {
-  /* background-color: lightblue; */
-}
-
 .week table {
   width: 100%;
   border-spacing: 25px;
@@ -48,6 +45,21 @@ calender-left
 .week table tbody td {
   padding: 20px 0;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.week .selected {
+  color: #fff;
+  background-color: brown;
+}
+
+.week .before {
+  color: grey;
+}
+
+.week .today {
+  color: #fff;
+  background-color: green;;
 }
 
 /* =====================
@@ -113,3 +125,4 @@ padding-top: 30px;
   background-color: #E07628;
   margin-right: 15px;
 }
+

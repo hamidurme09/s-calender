@@ -11,48 +11,30 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.calender {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.calender-body {
-  min-height: 200px;
-  display: flex;
-}
-
 /* =====================
 calender-left
 ===================== */
-
-.calender-left {
-  width: 60%;
-  border: 1px solid black;
-  padding: 20px;
-  text-align: center;
-}
-
-.week table {
+ table {
   width: 100%;
-  border-spacing: 25px;
+  border-spacing: 15px;
 }
 
-.week table thead th {
+ table thead th {
   padding: 10px 0;
   border-bottom: 1px solid gray;
 }
 
-.week table tbody td {
+ table tbody td {
   padding: 20px 0;
   /* border-radius: 10px; */
   cursor: pointer;
 }
 
-.week .before {
-  color: grey;
+ .before {
+  color: #E9E8E7;
 }
 
-.week .today {
+ .today {
   color: #fff;
   background-color: green;;
 }
@@ -77,81 +59,14 @@ calender-left
   color: #fff;
 }
 
-.week .selected {
-  /* color: #fff;
-  background-color: brown; */
+ .selected {
   border: 2px solid red;
 }
 
-/* =====================
-calender-right
-===================== */
-
-.calender-right {
-  width: 40%;
-  padding: 20px;
+.holiday {
+  background-color: blue !important;
 }
 
-.description {
-  padding-top: 20px;
-}
 
-.cal-standard {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
 
-.cal-standard-color {
-  height: 20px;
-  width: 45px;
-  margin-right: 10px;
-}
-
-.cal-standard-color-1 {
-  background-color: #E07628;
-}
-
-.cal-standard-color-2 {
-  background-color: #E8A771;
-}
-
-.cal-standard-color-3 {
-  background-color: #56A2D6;
-}
-
-.cal-standard-color-4 {
-  background-color: #064476;
-}
-
-.info {
-  padding-top: 5px;
-  padding-left: 55px;
-}
-
-/* =====================
-calender-footer
-===================== */
-.calender-footer {
-padding-top: 30px;
-margin-bottom: 200px;
-}
-
-.footer-color-text {
-  display: flex;
-}
-
-.footer-color {
-  height: 20px;
-  width: 45px;
-  background-color: #E07628;
-  margin-right: 15px;
-}
-
-.footerTu {
-  /* height: 20px;
-  width: 45px; */
-  background-color: #56A2D6;
-  /* margin-right: 15px; */
-}
 

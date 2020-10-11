@@ -3,7 +3,14 @@ import React, { useEffect, useState } from "react";
 import CalendarHeader from "./components/CalendarHeader";
 import WeekDay from "./components/WeekDay";
 
-const CalenderLeft = ({ value, setSelectedDate }) => {
+import styles from './CalendarLeft.module.css'
+
+const CalenderLeft = ({
+  value,
+  setSelectedDate,
+  selectedPrice,
+  setSelectedPrice,
+}) => {
   const weekdays = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"];
 
   const [calendar, setCalendar] = useState([]);
@@ -11,7 +18,6 @@ const CalenderLeft = ({ value, setSelectedDate }) => {
   useEffect(() => {
     const startDay = value.clone().startOf("month").startOf("week");
     const endDay = value.clone().endOf("month").endOf("week");
-
     const day = startDay.clone().subtract(1, "day");
 
     const calendarArr = [];
@@ -35,11 +41,12 @@ const CalenderLeft = ({ value, setSelectedDate }) => {
   }, [value]);
 
   return (
-    <div className="calender-left">
+    <div className={styles.calendarLeft}>
       <CalendarHeader value={value} setSelectedDate={setSelectedDate} />
 
-      <div className="week">
+      <div>
         <table>
+
           <thead>
             <tr>
               {weekdays.map((day) => (
@@ -53,8 +60,11 @@ const CalenderLeft = ({ value, setSelectedDate }) => {
               value={value}
               calendar={calendar}
               setSelectedDate={setSelectedDate}
+              setSelectedPrice={setSelectedPrice}
+              selectedPrice={selectedPrice}
             />
           </tbody>
+          
         </table>
       </div>
     </div>

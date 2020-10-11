@@ -44,13 +44,8 @@ calender-left
 
 .week table tbody td {
   padding: 20px 0;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   cursor: pointer;
-}
-
-.week .selected {
-  color: #fff;
-  background-color: brown;
 }
 
 .week .before {
@@ -60,6 +55,32 @@ calender-left
 .week .today {
   color: #fff;
   background-color: green;;
+}
+
+.sunAndMon {
+  background-color: gray;
+  color: #fff;
+}
+
+.overnight {
+  background-color: #56A2D6;
+  color: #fff;
+}
+
+.saterday {
+  background-color: #064476;
+  color: #fff;
+}
+
+.standard {
+  background-color: #E07628;
+  color: #fff;
+}
+
+.week .selected {
+  /* color: #fff;
+  background-color: brown; */
+  border: 2px solid red;
 }
 
 /* =====================
@@ -113,6 +134,7 @@ calender-footer
 ===================== */
 .calender-footer {
 padding-top: 30px;
+margin-bottom: 200px;
 }
 
 .footer-color-text {
@@ -124,5 +146,12 @@ padding-top: 30px;
   width: 45px;
   background-color: #E07628;
   margin-right: 15px;
+}
+
+.footerTu {
+  /* height: 20px;
+  width: 45px; */
+  background-color: #56A2D6;
+  /* margin-right: 15px; */
 }
 

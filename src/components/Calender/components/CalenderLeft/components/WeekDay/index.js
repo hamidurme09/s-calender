@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import moment from "moment";
 
 const WeekDay = ({ value, calendar, setSelectedDate }) => {
+  const [overnight, setOvernight] = useState();
+
   function isSelected(day) {
     return value.isSame(day, "day");
   }
@@ -18,6 +20,27 @@ const WeekDay = ({ value, calendar, setSelectedDate }) => {
     if (beforeToday(day)) return "before";
     if (isSelected(day)) return "selected";
     if (isToday(day)) return "today";
+
+    if (day.format("dd") === "Mo" || day.format("dd") === "Su") {
+      return "sunAndMon";
+    }
+
+    if (day.format("dd") === "Tu") {
+      return "overnight";
+    }
+
+    if (day.format("dd") === "Sa") {
+      return "saterday";
+    }
+
+    if (
+      day.format("dd") === "We" ||
+      day.format("dd") === "Th" ||
+      day.format("dd") === "Fr"
+    ) {
+      return "standard";
+    }
+
     return "";
   }
 
@@ -32,6 +55,7 @@ const WeekDay = ({ value, calendar, setSelectedDate }) => {
               className={dayStyles(day)}
             >
               {day.format("D").toString()}
+              {overnight && <p>$9.99</p>}
             </td>
           ))}
         </tr>

@@ -38,4 +38,48 @@
   font-size: 12px;
 }
 
+/* =================
+day style
+================= */
+.before {
+  color: #e9e8e7;
+}
+
+.overnight {
+  background-color: #56a2d6;
+  color: #fff;
+}
+
+.overnightSelected {
+  background-color: #56a2d6;
+  color: #fff;
+  border: 3px solid red;
+}
+
+.saterday {
+  background-color: #064476;
+  color: #fff;
+}
+
+.saterdaySelected {
+  background-color: #064476;
+  color: #fff;
+  border: 3px solid red;
+}
+
+.standard {
+  background-color: #e07628;
+  color: #fff;
+}
+
+.standardSelected {
+  background-color: #e07628;
+  color: #fff;
+  border: 3px solid red;
+}
+
+.selected {
+  border: 2px solid red;
+}
+
 

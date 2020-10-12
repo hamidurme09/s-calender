@@ -34,31 +34,37 @@ const WeekDate = ({
   // }
 
   const handleHoliday = (day) => {
-    const holiday = ["November 25"];
+    const holiday = ["November 26"];
 
     let isHoliday = false;
+
     holiday.map((hday) => {
       if (day.format("MMMM DD") === hday) {
         isHoliday = true;
       }
     });
+
     return isHoliday;
   };
 
   function dayStyles(day) {
-    if (isSelected(day)) return "selected";
+    // if (isSelected(day)) return "selected";
     // if (isToday(day)) return "today";
 
     if (beforeToday(day) || handleHoliday(day) || day.format("dd") === "Mo" || day.format("dd") === "Su") {
-      return "before";
+      return styles.before;
     }
-
+    
     if (day.format("dd") === "Tu") {
-      return "overnight";
+      if (isSelected(day)) return styles.overnightSelected;
+      
+      return styles.overnight;
     }
 
     if (day.format("dd") === "Sa") {
-      return "saterday";
+      if (isSelected(day)) return styles.saterdaySelected;
+
+      return styles.saterday;
     }
 
     if (
@@ -66,7 +72,9 @@ const WeekDate = ({
       day.format("dd") === "Th" ||
       day.format("dd") === "Fr"
     ) {
-      return "standard";
+      if (isSelected(day)) return styles.standardSelected;
+
+      return styles.standard;
     }
 
     return "";

@@ -6,3 +6,23 @@
 .footerColorText {
   display: flex;
 }
+
+.before {
+  color: #e9e8e7;
+}
+
+.overnight {
+  background-color: #56a2d6;
+  color: #fff;
+}
+
+.saterday {
+  background-color: #064476;
+  color: #fff;
+}
+
+.standard {
+  background-color: #e07628;
+  color: #fff;
+}
+

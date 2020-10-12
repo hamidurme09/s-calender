@@ -5,7 +5,7 @@ const CalendarFooter = ({ selectedPrice, selectedDate }) => {
 
     function footerColorStyle(day) {
         if (day.format("dd") === "Tu") {
-          return "overnight";
+          return styles.overnight;
         }
     
         if (
@@ -13,11 +13,11 @@ const CalendarFooter = ({ selectedPrice, selectedDate }) => {
           day.format("dd") === "Th" ||
           day.format("dd") === "Fr"
         ) {
-          return "standard";
+          return styles.standard;
         }
     
         if (day.format("dd") === "Sa") {
-          return "saterday";
+          return styles.saterday;
         }
     
         return "";
@@ -25,20 +25,26 @@ const CalendarFooter = ({ selectedPrice, selectedDate }) => {
 
   return (
     <div className={styles.calendarFooter}>
-      {selectedPrice && (
-        <div className={styles.footerColorText}>
-          <div
-            className={footerColorStyle(selectedDate)}
-            style={{ height: 20, width: 45, marginRight: 10 }}
-          />
+      {
+        selectedPrice && (
+          <div className={styles.footerColorText}>
 
-          <p className={styles.footerText}>
-            You have selected Standard Shipping - ${selectedPrice}. Your package
-            will arrive on{" "}
-            <strong>{selectedDate.format("MMMM DD").toString()}</strong>
-          </p>
-        </div>
-      )}
+            <div
+              className={footerColorStyle(selectedDate)}
+              style={{ height: 20, width: 45, marginRight: 10 }}
+            />
+
+            <p className={styles.footerText}>
+              You have selected Standard Shipping - ${selectedPrice}. Your package
+              will arrive on{" "}
+
+              <strong>{selectedDate.format("MMMM DD").toString()}</strong>
+              
+            </p>
+
+          </div>
+        )
+      }
     </div>
   );
 };

@@ -12,6 +12,7 @@ const Calendar = () => {
   return (
     <div>
       <div className={styles.calendarContainer}>
+
         <CalendarLeft
           setSelectedPrice={setSelectedPrice}
           selectedPrice={selectedPrice}
@@ -20,11 +21,14 @@ const Calendar = () => {
         />
 
         <CalendarRight />
+
       </div>
+
       <CalendarFooter
         selectedDate={selectedDate}
         selectedPrice={selectedPrice}
       />
+      
     </div>
   );
 };

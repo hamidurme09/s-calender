@@ -34,7 +34,7 @@ const WeekDate = ({
   // }
 
   const handleHoliday = (day) => {
-    const holiday = ["November 26"];
+    const holiday = ["November 26", "October 21"];
 
     let isHoliday = false;
 
@@ -47,9 +47,30 @@ const WeekDate = ({
     return isHoliday;
   };
 
+  const handleNextHoliday = (day) => {
+    const holiday = ["November 26", "October 21"];
+
+    
+    let isHoliday = false;
+    
+    holiday.map((hday) => {
+      
+      if (day.clone().subtract(1, "day").format("MMMM DD") === hday) {
+        isHoliday = true;
+      }
+      
+    });
+
+    return isHoliday;
+  };
+
   function dayStyles(day) {
     // if (isSelected(day)) return "selected";
     // if (isToday(day)) return "today";
+
+    if(handleHoliday(day)) {
+      // console.log('holiday')
+    }
 
     if (beforeToday(day) || handleHoliday(day) || day.format("dd") === "Mo" || day.format("dd") === "Su") {
       return styles.before;
@@ -72,6 +93,11 @@ const WeekDate = ({
       day.format("dd") === "Th" ||
       day.format("dd") === "Fr"
     ) {
+
+      if(handleNextHoliday(day)){
+        return styles.overnight;
+      }
+
       if (isSelected(day)) return styles.standardSelected;
 
       return styles.standard;

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./CalendarRight.module.css";
 
-const CalenderRight = () => {
+const CalendarRight = () => {
   return (
     <div className={styles.calenderRight}>
       <div>
@@ -55,4 +55,4 @@ const CalenderRight = () => {
   );
 };
 
-export default CalenderRight;
+export default CalendarRight;

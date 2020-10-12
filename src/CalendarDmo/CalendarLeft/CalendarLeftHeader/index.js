@@ -2,7 +2,9 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
-const CalendarHeader = ({ value, setSelectedDate }) => {
+import styles from './CalendarLeftHeader.module.css'
+
+const CalendarLeftHeader = ({ value, setSelectedDate }) => {
   function currMonthName() {
     return value.format("MMM");
   }
@@ -24,7 +26,7 @@ const CalendarHeader = ({ value, setSelectedDate }) => {
   }
 
   return (
-    <div style={{ display: "flex", alignItems: "center", margin: "0 auto" }}>
+    <div className={styles.headerContainer}>
       {!thisMonth() && (
         <FontAwesomeIcon
           onClick={() => !thisMonth() && setSelectedDate(prevMonth())}
@@ -33,7 +35,7 @@ const CalendarHeader = ({ value, setSelectedDate }) => {
         />
       )}
 
-      <h4 style={{ padding: "0 10px" }}>
+      <h4 className={styles.header}>
         {currMonthName()} {currYear()}
       </h4>
 
@@ -46,4 +48,4 @@ const CalendarHeader = ({ value, setSelectedDate }) => {
   );
 };
 
-export default CalendarHeader;
+export default CalendarLeftHeader;

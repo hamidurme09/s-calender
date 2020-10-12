@@ -8,44 +8,22 @@
 
 body {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
-/* =====================
-calender-left
-===================== */
- table {
-  width: 100%;
-  border-spacing: 15px;
-}
-
- table thead th {
-  padding: 10px 0;
-  border-bottom: 1px solid gray;
-}
-
- table tbody td {
-  padding: 20px 0;
-  /* border-radius: 10px; */
-  cursor: pointer;
-}
-
- .before {
-  color: #E9E8E7;
-}
-
- .today {
-  color: #fff;
-  background-color: green;;
+.before {
+  color: #e9e8e7;
 }
 
 .sunAndMon {
   background-color: gray;
-  color: #fff;
+  color: #e9e8e7;
 }
 
 .overnight {
-  background-color: #56A2D6;
+  background-color: #56a2d6;
   color: #fff;
 }
 
@@ -55,18 +33,10 @@ calender-left
 }
 
 .standard {
-  background-color: #E07628;
+  background-color: #e07628;
   color: #fff;
 }
 
- .selected {
+.selected {
   border: 2px solid red;
 }
-
-.holiday {
-  background-color: blue !important;
-}
-
-
-
-

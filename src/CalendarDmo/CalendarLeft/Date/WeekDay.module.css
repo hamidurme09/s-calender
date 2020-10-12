@@ -1,0 +1,41 @@
+.dayNames,
+.dateNames {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.week,
+.weekDay {
+  /* background-color: #7a0c0c; */
+  margin-right: 10px;
+  margin-bottom: 5px;
+  width: calc((100% - 15px) / 7.8);
+  /* padding: 5px 0; */
+  text-align: center;
+  color: black;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.week {
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+}
+
+/* .weekDay {
+    background-color: lightblue;
+  } */
+
+.week:last-child,
+.weekDay:last-child {
+  margin-right: 0px;
+}
+
+.price {
+  font-size: 12px;
+}
+
+

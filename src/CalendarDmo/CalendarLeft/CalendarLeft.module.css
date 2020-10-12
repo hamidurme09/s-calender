@@ -1,0 +1,39 @@
+.calendarLeft {
+  width: 500px;
+}
+.calendarBody {
+  border: 1px solid rgba(0, 0, 0, .3);
+  min-height: 200px;
+  padding: 20px;
+}
+
+.dayNames,
+.dateNames {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.week,
+.weekDay {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: calc((100% - 15px) / 7.8);
+  padding: 5px 0;
+  text-align: center;
+  color: black;
+  font-weight: 400;
+}
+
+.week {
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+
+.week:last-child,
+.weekDay:last-child {
+  margin-right: 0px;
+}
+
